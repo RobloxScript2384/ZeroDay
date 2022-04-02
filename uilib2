@@ -14,7 +14,7 @@ function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 	local UICorner_2 = Instance.new("UICorner")
 	local BottomFramePiece = Instance.new("Frame")
 	local Title = Instance.new("TextLabel")
-	local Version = Instance.new("TextLabel")
+	local VER = Instance.new("TextLabel")
 	local TabButtons = Instance.new("Frame")
 	local UICorner_3 = Instance.new("UICorner")
 	local Buttons = Instance.new("ScrollingFrame")
@@ -68,21 +68,21 @@ function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 	Title.TextWrapped = true
 	Title.TextXAlignment = Enum.TextXAlignment.Left
 
-	Version.Name = "Version"
-	Version.Parent = TopFrame
-	Version.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-	Version.BackgroundTransparency = 1.000
-	Version.BorderColor3 = Color3.fromRGB(27, 42, 53)
-	Version.BorderSizePixel = 0
-	Version.Position = UDim2.new(0.0250000004, 0, 0.713999987, 0)
-	Version.Size = UDim2.new(0, 78, 0, 22)
-	Version.Font = Enum.Font.SourceSans
-	Version.Text = VERSION
-	Version.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Version.TextScaled = true
-	Version.TextSize = 14.000
-	Version.TextWrapped = true
-	Version.TextXAlignment = Enum.TextXAlignment.Left
+	VER.Name = "Version"
+	VER.Parent = TopFrame
+	VER.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	VER.BackgroundTransparency = 1.000
+	VER.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	VER.BorderSizePixel = 0
+	VER.Position = UDim2.new(0.0250000004, 0, 0.713999987, 0)
+	VER.Size = UDim2.new(0, 78, 0, 22)
+	VER.Font = Enum.Font.SourceSans
+	VER.Text = VERSION
+	VER.TextColor3 = Color3.fromRGB(255, 255, 255)
+	VER.TextScaled = true
+	VER.TextSize = 14.000
+	VER.TextWrapped = true
+	VER.TextXAlignment = Enum.TextXAlignment.Left
 
 	TabButtons.Name = "TabButtons"
 	TabButtons.Parent = Main
