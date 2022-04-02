@@ -2,8 +2,8 @@ local KGHJDHDKS = {}
 
 function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 	
-	if TITLE == "" or nil then return TITLE == "Unnamed" end
-	if VERSION == "" or nil then return VERSION == "V0.0.1" end
+	if TITLE == "" or nil then TITLE == "Unnamed" end
+	if VERSION == "" or nil then VERSION == "V0.0.1" end
 	
 	-- Instances:
 
@@ -121,7 +121,7 @@ function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 	
 	function tabs:CreateTab(TITLE)	
 		
-		if TITLE == "" or nil then return TITLE == "Unnamed Tab" end
+		if TITLE == "" or nil then TITLE == "Unnamed Tab" end
 		
 		local TabButtonTemplate = Instance.new("TextButton")
 		local UICorner_4 = Instance.new("UICorner")
@@ -135,6 +135,7 @@ function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 		TabButtonTemplate.BorderSizePixel = 0
 		TabButtonTemplate.Size = UDim2.new(0, 141, 0, 39)
 		TabButtonTemplate.Font = Enum.Font.SourceSans
+		TabButtonTemplate.Text = TITLE
 		TabButtonTemplate.TextColor3 = Color3.fromRGB(255, 255, 255)
 		TabButtonTemplate.TextScaled = true
 		TabButtonTemplate.TextSize = 14.000
