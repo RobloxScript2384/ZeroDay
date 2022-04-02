@@ -2,9 +2,6 @@ local KGHJDHDKS = {}
 
 function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 	
-	if TITLE == "" or nil then TITLE == "Unnamed" end
-	if VERSION == "" or nil then VERSION == "V0.0.1" end
-	
 	-- Instances:
 
 	local ZeroDay = Instance.new("ScreenGui")
@@ -121,14 +118,12 @@ function KGHJDHDKS:CreateWindow(TITLE,VERSION)
 	
 	function tabs:CreateTab(TITLE)	
 		
-		if TITLE == "" or nil then TITLE == "Unnamed Tab" end
-		
 		local TabButtonTemplate = Instance.new("TextButton")
 		local UICorner_4 = Instance.new("UICorner")
 		local TabTemplate = Instance.new("ScrollingFrame")
 		local UIListLayout_2 = Instance.new("UIListLayout")
 
-		TabButtonTemplate.Name = "TabButtonTemplate"
+		TabButtonTemplate.Name = TITLE
 		TabButtonTemplate.Parent = Buttons
 		TabButtonTemplate.BackgroundColor3 = Color3.fromRGB(44, 171, 255)
 		TabButtonTemplate.BackgroundTransparency = 1.000
