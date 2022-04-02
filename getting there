@@ -1,7 +1,3 @@
-_G.goodboy = "Xx_Ed"
-_G.wow = "kaboom"
-_G.usable = "ZerodayLibBestThatsWhyIUseIt"
-
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	local JKFDJKSFHJSD = {_G.goodboy,_G.wow,_G.usable} if JKFDJKSFHJSD[1] == "Xx_Ed" and JKFDJKSFHJSD[2] == "kaboom" and JKFDJKSFHJSD[3] == "ZerodayLibBestThatsWhyIUseIt" then
 local lib = {}
 	
@@ -155,7 +151,6 @@ local lib = {}
                             end
                         end
                     end
-                end
             end)
 
         end
