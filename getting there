@@ -1,4 +1,6 @@
-
+_G.goodboy = "Xx_Ed"
+_G.wow = "kaboom"
+_G.usable = "ZerodayLibBestThatsWhyIUseIt"
 
 																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																	local JKFDJKSFHJSD = {_G.goodboy,_G.wow,_G.usable} if JKFDJKSFHJSD[1] == "Xx_Ed" and JKFDJKSFHJSD[2] == "kaboom" and JKFDJKSFHJSD[3] == "ZerodayLibBestThatsWhyIUseIt" then
 local lib = {}
@@ -66,7 +68,7 @@ local lib = {}
         Version.BackgroundTransparency = 1.000
         Version.BorderColor3 = Color3.fromRGB(27, 42, 53)
         Version.BorderSizePixel = 0
-        Version.Position = UDim2.new(0.100000001, 0, 0.103, 0)
+        Version.Position = UDim2.new(0.288481683, 0, 0.103, 0)
         Version.Size = UDim2.new(0, 78, 0, 22)
         Version.Font = Enum.Font.SourceSans
         Version.Text = ver
@@ -110,9 +112,10 @@ local lib = {}
             local TabTemplate = Instance.new("ScrollingFrame")
             local UIListLayout_2 = Instance.new("UIListLayout")
  
-            TabButtonTemplate.Name = title
+            TabButtonTemplate.Name = "TabButtonTemplate"
             TabButtonTemplate.Parent = Buttons
             TabButtonTemplate.BackgroundColor3 = Color3.fromRGB(74, 122, 255)
+            TabButtonTemplate.BackgroundTransparency = 1
             TabButtonTemplate.BorderSizePixel = 0
             TabButtonTemplate.Size = UDim2.new(0, 189, 0, 40)
             TabButtonTemplate.Font = Enum.Font.SourceSans
@@ -132,6 +135,7 @@ local lib = {}
             TabTemplate.Size = UDim2.new(0, 554, 0, 383)
             TabTemplate.CanvasSize = UDim2.new(0, 0, 0, 0)
             TabTemplate.ScrollBarThickness = 0
+            TabTemplate.Visible = false
 
             UIListLayout_2.Parent = TabTemplate
             UIListLayout_2.HorizontalAlignment = Enum.HorizontalAlignment.Center
@@ -139,7 +143,19 @@ local lib = {}
             UIListLayout_2.Padding = UDim.new(0.0199999996, 0)
 
             TabButtonTemplate.MouseButton1Down:Connect(function()
-            
+                    for i,v in pairs(Tabs:GetChildren()) do
+                        if v.Name == "TabTemplate" then
+                            v.Visible = false
+                        end
+                        TabTemplate.Visible = true
+                        for i,v in pairs(Buttons:GetChildren()) do
+                            if v.Name == "TabButtonTemplate" then
+                                game:GetService("TweenService"):Create(v,TweenInfo.new(.3, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{BackgroundTransparency = 1}):Play()
+                                game:GetService("TweenService"):Create(TabButtonTemplate,TweenInfo.new(.3, Enum.EasingStyle.Linear, Enum.EasingDirection.Out),{BackgroundTransparency = 0}):Play()
+                            end
+                        end
+                    end
+                end
             end)
 
         end
